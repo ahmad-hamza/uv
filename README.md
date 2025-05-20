@@ -126,9 +126,12 @@ $$
 
 $$
   \begin{bmatrix} 
-    X \\ 
-    Y 
-  \end{bmatrix}=
+    a_i \\ 
+    a_j \\
+    a_k \\
+    . \\
+    .
+  \end{bmatrix} * 
 $$
 $$
 \vec{v} = \begin{bmatrix} X \\\ Y \end{bmatrix}
@@ -138,14 +141,11 @@ $$
 $$
 $$ \begin{bmatrix} X \\ Y \end{bmatrix} $$
 
+$$
 [[1, x_0, x_0 ** 2, x_0 ** 3, ..., x_0 ** degree],
  [1, x_1, x_1 ** 2, x_1 ** 3, ..., x_1 ** degree],
  ...]
-##
-[[1, x_0, x_0 ** 2, x_0 ** 3, ..., x_0 ** degree],
- [1, x_1, x_1 ** 2, x_1 ** 3, ..., x_1 ** degree],
- ...]
-##
+$$
 
 
 ### Using Helium Intrinsics
