@@ -117,6 +117,27 @@ $$
 \newcommand\mycolv[1]{\begin{bmatrix}\#1\end{bmatrix}}
 C = A x B = \mycolv{a_i\\a_j\\a_k\\.\\.}  x \mycolv{b_i\\b_j\\b_k\\.\\.} = [ (a_i x b_i) , (a_j x b_j ) , (a_k x b_k) ...]
 $$
+```math
+  \begin{bmatrix} 
+    X \\ 
+    Y 
+  \end{bmatrix}
+```
+
+$$
+  \begin{bmatrix} 
+    X \\ 
+    Y 
+  \end{bmatrix}
+$$
+$$
+\vec{v} = \begin{bmatrix} X \\\ Y \end{bmatrix}
+$$
+
+$\begin{bmatrix}A1 &A2 & A3\\A4 & A5 & A6 \end{bmatrix}$
+
+$$ \begin{bmatrix} X \\ Y \end{bmatrix} $$
+
 
 
 ### Using Helium Intrinsics
