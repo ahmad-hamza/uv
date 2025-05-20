@@ -131,17 +131,23 @@ $$
     a_k \\
     . \\
     .
-  \end{bmatrix} * 
+  \end{bmatrix}  = 
 
-  \begin{bmatrix}   a_i \\\ a_j \\\ a_k \\\ . \\\ .  \end{bmatrix} =
-
+  \begin{bmatrix} 
+    a_i \\ 
+    a_j \\
+    a_k \\
+    . \\
+    .
+  \end{bmatrix}  = 
 $$
+
 $$
 \vec{v} = \begin{bmatrix} X \\\ Y \end{bmatrix}
 $$
-
-
-$$ \begin{bmatrix} X \\ Y \end{bmatrix} $$
+$$ 
+\begin{bmatrix} X \\\ Y \end{bmatrix} 
+$$
 
 ### Using Helium Intrinsics
 
