@@ -113,41 +113,8 @@ Vectorization can be utilized into your code via either auto-vectorization or He
 
 Below, we will explore how to manually implement SIMD victorized code using Helium intrinsic functions. Let's multiply two float vectors A,B element by element : 
 
-$$
-\newcommand\mycolv[1]{\begin{bmatrix}\#1\end{bmatrix}}
-C = A x B = \mycolv{a_i\\a_j\\a_k\\.\\.}  x \mycolv{b_i\\b_j\\b_k\\.\\.} = [ (a_i x b_i) , (a_j x b_j ) , (a_k x b_k) ...]
-$$
-```math
-  \begin{bmatrix} 
-    X \\ 
-    Y 
-  \end{bmatrix} = 
-```
+<br> <img src="fig/eq.png"/>
 
-$$
-  \begin{bmatrix} 
-    a_i \\ 
-    a_j \\
-    a_k \\
-    . \\
-    .
-  \end{bmatrix}  = 
-
-  \begin{bmatrix} 
-    a_i \\ 
-    a_j \\
-    a_k \\
-    . \\
-    .
-  \end{bmatrix}  = 
-$$
-
-$$
-\vec{v} = \begin{bmatrix} X \\\ Y \end{bmatrix}
-$$
-$$ 
-\begin{bmatrix} X \\\ Y \end{bmatrix} 
-$$
 
 ### Using Helium Intrinsics
 
