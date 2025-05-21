@@ -347,6 +347,7 @@ Below is an example of how to use the cycle counter:
 --------------------------------------------------------------------------------
 ## Compiling and Building application
 For required dependencies according to your operating system (Windows/Mac/Linux) and detailed installation steps follow [Quick Start for Renesas RA](https://tool-support.renesas.com/e2studio/vscode/docs/quick-start-ra.html#)
+
 **Setup the project**
 1. Open vscode and [installing Renesas vscode extension](https://tool-support.renesas.com/e2studio/vscode/docs/installation.html) or from [marketplace](https://marketplace.visualstudio.com/items?itemName=RenesasElectronicsCorporation.renesas-build-utilities)
 2. from vscode marketplace install mcutools  and arm-debug tools.
