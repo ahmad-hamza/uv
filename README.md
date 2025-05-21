@@ -422,7 +422,7 @@ If you lost the MCUboot you can restore it to the board again using serial. this
 ```bash
 rfp-cli -d RA -if uart -s 115200 -bin bootloader.bin
 ```
-- where <path> 
+
 ### SWD
 - Firmware can be uploaded via USB-FS DFU on J13 pins B1, B20.
 - debugger pins swdclk, swdio are avaliable at J13 conncector pins 
