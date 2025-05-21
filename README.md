@@ -113,10 +113,7 @@ Vectorization can be utilized into your code via either auto-vectorization or He
 
 Below, we will explore how to manually implement SIMD victorized code using Helium intrinsic functions. Let's multiply two float vectors A,B element by element : 
 
-$$
- \newcommand\mycolv[1]{\begin{bmatrix}#1\end{bmatrix}}
- C = A x B = \mycolv{a_i\\a_j\\a_k\\...}  x \mycolv{b_i\\b_j\\b_k\\...} = [ (a_i x b_i) , (a_j x b_j ) , (a_k x b_k) ...]
-$$
+<br> <img src="fig/eq.png"/>
 
 
 ### Using Helium Intrinsics
@@ -349,6 +346,7 @@ Below is an example of how to use the cycle counter:
 
 --------------------------------------------------------------------------------
 ## Compiling and Building application
+For required dependencies according to your operating system (Windows/Mac/Linux) and detailed installation steps follow [Quick Start for Renesas RA](https://tool-support.renesas.com/e2studio/vscode/docs/quick-start-ra.html#)
 
 **Setup the project**
 1. Open vscode and [installing Renesas vscode extension](https://tool-support.renesas.com/e2studio/vscode/docs/installation.html) or from [marketplace](https://marketplace.visualstudio.com/items?itemName=RenesasElectronicsCorporation.renesas-build-utilities)
