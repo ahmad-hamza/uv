@@ -15,7 +15,7 @@ Engineered for industrial and automotive environments, it offers an **extended o
 <br> <img src="fig/board.jpg"/>
 
 
-The µV board relies on **VS Code** for development, and support both **GCC** and **Clang** compilers. It includes extensive peripheral template projects to simplify peripherals integration into your applications. Developers can easily debug directly within VS Code. The board supports both **Bare-metal** and **RTOS** environments and integrates **CMSIS libraries** for advanced DSP and neural network functionalities.
+The µV board utilizes **VS Code** through Renesas-VSCODE extension for both **GCC** and **Clang** development or directly form consol on other prefered IDE. The board comes also with extensive peripheral template projects to simplify peripherals integration into your applications. Developers can easily debug within VS Code. The board supports both **Bare-metal** and **RTOS** environments and integrates **CMSIS libraries** for advanced DSP and neural network functionalities.
 
 ---------------------------------
 ## Hardware Details
@@ -422,7 +422,7 @@ If you lost the MCUboot you can restore it to the board again using serial. this
 ```bash
 rfp-cli -d RA -if uart -s 115200 -bin bootloader.bin
 ```
-- where <path> 
+
 ### SWD
 - Firmware can be uploaded via USB-FS DFU on J13 pins B1, B20.
 - debugger pins swdclk, swdio are avaliable at J13 conncector pins 
