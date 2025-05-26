@@ -15,7 +15,7 @@ Engineered for industrial and automotive environments, it offers an **extended o
 <br> <img src="fig/board.jpg"/>
 
 
-The µV board utilizes **VS Code** through Renesas-VSCODE extension for both **GCC** and **Clang** development or directly from consol or your prefered IDE. The board comes also with extensive peripheral template projects to simplify peripherals integration into your applications. Developers can easily debug within VS Code. The board supports both **Bare-metal** and **RTOS** environments and integrates **CMSIS libraries** for advanced DSP and neural network functionalities.
+The µV board utilizes **VS Code** through Renesas extension for both **GCC** and **Clang** development or directly from consol or your prefered IDE. The board comes also with extensive peripheral template projects to simplify peripherals integration into your applications. Developers can easily debug within VS Code. The board supports both **Bare-metal** and **RTOS** environments and integrates **CMSIS libraries** for advanced DSP and neural network functionalities.
 
 ---------------------------------
 ## Hardware Details
