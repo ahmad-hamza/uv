@@ -1,11 +1,11 @@
-# MicroVEctor Board
+# Vectino Board
 ----------------------------------------------
 ## Introduction
 
 
-MicroVEctor (µV) Board is an open-source platform designed for advanced embedded applications, delivering exceptional performance through the ARM Cortex-M85 core with Helium MVE (**M-Profile Vector Extension**) technology. The µV board is an ideal platform for developers looking to leverage vectorization into their embedded applications. With its advanced peripherals and connectivity options, industrial-grad design and user-friendly open-source development environment.
+Vectino Board is an open-source platform designed for advanced embedded applications, delivering exceptional performance through the ARM Cortex-M85 core with Helium MVE (**M-Profile Vector Extension**) technology. Vectino board is an ideal platform for developers looking to leverage vectorization into their embedded applications. With its advanced peripherals and connectivity options, industrial-grad design and user-friendly open-source development environment.
 
-The µV platform provides extensive peripherals, including **USB-HS**, **CAN-FD**, **RS-485**, **I3C**, **I2C**, **I2S**, **UART**, and **QSPI**, and advanced **High-speed ADCs and DACs and comparators**  ensuring seamless integration with diverse systems. while advanced PWM and timer/capture peripherals enables **Field-Oriented Control (FOC)** and direct drive of **BLDC** and **3-phase induction motors**.
+The Vectino platform provides extensive peripherals, including **USB-HS**, **CAN-FD**, **RS-485**, **I3C**, **I2C**, **I2S**, **UART**, and **QSPI**, and advanced **High-speed ADCs and DACs and comparators**  ensuring seamless integration with diverse systems. while advanced PWM and timer/capture peripherals enables **Field-Oriented Control (FOC)** and direct drive of **BLDC** and **3-phase induction motors**.
 
 Engineered for industrial and automotive environments, it offers an **extended operating temperature range** and **Error Correction Code (ECC)** Memory for enhanced reliability in noisy conditions.
  
@@ -386,7 +386,7 @@ You can use either **GCC** or **Clang** to compile the code. The following steps
 
 ### MCUBoot
 
-µV-board comes pre-programmed with MCUBoot, which runs from flash and enables firmware upgrades without the need for jtag/swd. MCUBoot structures internal flash into partitions:
+Vectino board comes pre-programmed with MCUBoot, which runs from flash and enables firmware upgrades without the need for jtag/swd. MCUBoot structures internal flash into partitions:
 1. boot_partition	for MCUBoot itself.
 2. primary_partition : primary slot for the user application image.
 3. secondary_partition : secondary slot for the user application image.
@@ -399,7 +399,7 @@ MCUmgr is used to communicate with the MCUBoot inside the device. steps to downl
 go install github.com/apache/mynewt-mcumgr-cli/mcumgr@latest
 ```
 - navigate to the build directory of your application, where the <your_code>.bin image is located.
-- Connect the µV-board to PC using USB type-c connector.
+- Connect the Vectino board to PC using USB type-c connector.
 - Run the following command:
 ```
 $ mcumgr image upload <your_code>.bin --conntype=serial --connstring="dev=<com-port>,baud=115200"
@@ -415,9 +415,9 @@ If you lost the MCUboot you can restore it to the board again using serial. this
 
 - Download [Renesas RFP software](https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui)
 - Connect a USB-serial cable to (TxD1,RxD1 on J13).
-- connect the USB-serial RTS pin to the reset pin in uV board.
+- connect the USB-serial RTS pin to the reset pin in Vectino board.
 - Connect USB to provide power to board.
-- Navigate the bootloader folder from the µV-Board folders.
+- Navigate the bootloader folder from the Vectino Board folders.
 - run the rfp-cli command:
 ```bash
 rfp-cli -d RA -if uart -s 115200 -bin bootloader.bin
