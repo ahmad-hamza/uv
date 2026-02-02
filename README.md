@@ -1,21 +1,21 @@
-# Vectino Board
+# Vectino-T1 Board
 ----------------------------------------------
 ## Introduction
 
 
-Vectino Board is an open-source platform designed for advanced embedded applications, delivering exceptional performance through the ARM Cortex-M85 core with Helium MVE (**M-Profile Vector Extension**) technology. Vectino board is an ideal platform for developers looking to leverage vectorization into their embedded applications. With its advanced peripherals and connectivity options, industrial-grad design and user-friendly open-source development environment.
+Vectino-T1 Board is an open-source platform designed for advanced embedded applications, delivering exceptional performance through the ARM Cortex-M85 core with Helium MVE (**M-Profile Vector Extension**) technology. Vectino-T1 board is an ideal platform for developers looking to leverage vectorization into their embedded applications. With its advanced peripherals and connectivity options, industrial-grad design and user-friendly open-source development environment.
 
-The Vectino platform provides extensive peripherals, including **USB-HS**, **CAN-FD**, **RS-485**, **I3C**, **I2C**, **I2S**, **UART**, and **QSPI**, and advanced **High-speed ADCs and DACs and comparators**  ensuring seamless integration with diverse systems. while advanced PWM and timer/capture peripherals enables **Field-Oriented Control (FOC)** and direct drive of **BLDC** and **3-phase induction motors**.
+The Vectino-T1 platform provides extensive peripherals, including **USB-HS**, **CAN-FD**, **RS-485**, **I3C**, **I2C**, **I2S**, **UART**, and **QSPI**, and advanced **High-speed ADCs and DACs and comparators**  ensuring seamless integration with diverse systems. while advanced PWM and timer/capture peripherals enables **Field-Oriented Control (FOC)** and direct drive of **BLDC** and **3-phase induction motors**.
 
 Engineered for industrial and automotive environments, it offers an **extended operating temperature range** and **Error Correction Code (ECC)** Memory for enhanced reliability in noisy conditions.
  
 
 <!-- <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr;"> -->
 <!-- <div style="text-align: center;"> -->
-<br> <img src="fig/board.jpg"/>
+<br> <img src="fig/brd.png"/>
 
 
-The µV board utilizes **VS Code** through Renesas extension for both **GCC** and **Clang** development or directly from consol or your prefered IDE. The board comes also with extensive peripheral template projects to simplify peripherals integration into your applications. Developers can easily debug within VS Code. The board supports both **Bare-metal** and **RTOS** environments and integrates **CMSIS libraries** for advanced DSP and neural network functionalities.
+The Vectino-T1 board utilizes **VS Code** through Renesas extension for both **GCC** and **Clang** development or directly from consol or your prefered IDE. The board comes also with extensive peripheral template projects to simplify peripherals integration into your applications. Developers can easily debug within VS Code. The board supports both **Bare-metal** and **RTOS** environments and integrates **CMSIS libraries** for advanced DSP and neural network functionalities.
 
 ---------------------------------
 ## Hardware Details
@@ -45,7 +45,7 @@ The µV board utilizes **VS Code** through Renesas extension for both **GCC** an
   - CAN with Flexible Data-rate CAN-FD (2-ports).
   - Serial Peripheral Interface (SPI) up to 60 Mbps (1-port)
   - Serial Sound Interface Enhanced (1-port).
-  - USB 2.0 High-Speed Module USB-HS 480 Mbps (1-port).
+  - USB 2.0 Full-Speed Module (1-port).
 
 - Analog
   - 12-bit A/D Converter (ADC12) × 2
@@ -62,10 +62,13 @@ The µV board utilizes **VS Code** through Renesas extension for both **GCC** an
 - Board level I/O
   - 32-GPIOs, 5-V tolerance, open drain, input pull-up, switchable driving ability.
   - GPIOs multiplexed with analog, comms, and timers functions.
-  - RS485 transceiver.
-  - CAN-FD transceiver.
-  - LEDs (3 leds).
-  - Boatloader :UART
+  - LEDs (RGB).
+  - Power led.
+  - Reset switch
+  - boot mode jumper
+  - External reference pads.
+  - Current measurement pads.
+  - Boat-loader :UART, MCUtools, SWD.
   - SWD debug interface.
 
 ----------------------
@@ -76,7 +79,7 @@ The µV board utilizes **VS Code** through Renesas extension for both **GCC** an
 &nbsp;
 <div 
 style="text-align: center;">
-  <div> <img src="fig/uv.png"/> </div>
+  <div> <img src="fig/vt1.png"/> </div>
 </div>
 &nbsp;
 &nbsp;
@@ -386,7 +389,7 @@ You can use either **GCC** or **Clang** to compile the code. The following steps
 
 ### MCUBoot
 
-Vectino board comes pre-programmed with MCUBoot, which runs from flash and enables firmware upgrades without the need for jtag/swd. MCUBoot structures internal flash into partitions:
+Vectino-T1 board comes pre-programmed with MCUBoot, which runs from flash and enables firmware upgrades without the need for jtag/swd. MCUBoot structures internal flash into partitions:
 1. boot_partition	for MCUBoot itself.
 2. primary_partition : primary slot for the user application image.
 3. secondary_partition : secondary slot for the user application image.
@@ -399,7 +402,7 @@ MCUmgr is used to communicate with the MCUBoot inside the device. steps to downl
 go install github.com/apache/mynewt-mcumgr-cli/mcumgr@latest
 ```
 - navigate to the build directory of your application, where the <your_code>.bin image is located.
-- Connect the Vectino board to PC using USB type-c connector.
+- Connect the Vectino-T1 board to PC using USB type-c connector.
 - Run the following command:
 ```
 $ mcumgr image upload <your_code>.bin --conntype=serial --connstring="dev=<com-port>,baud=115200"
@@ -415,9 +418,9 @@ If you lost the MCUboot you can restore it to the board again using serial. this
 
 - Download [Renesas RFP software](https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui)
 - Connect a USB-serial cable to (TxD1,RxD1 on J13).
-- connect the USB-serial RTS pin to the reset pin in Vectino board.
+- connect the USB-serial RTS pin to the reset pin in Vectino-T1 board.
 - Connect USB to provide power to board.
-- Navigate the bootloader folder from the Vectino Board folders.
+- Navigate the bootloader folder from the Vectino-T1 Board folders.
 - run the rfp-cli command:
 ```bash
 rfp-cli -d RA -if uart -s 115200 -bin bootloader.bin
